@@ -29,7 +29,7 @@ main {
 
 .side-bar {
     height: 100%;
-    width: 10%;
+    width: 30%;
     background-color: white;
     overflow-y: hidden;
     display: inline-block;
@@ -84,18 +84,64 @@ a .burg-menu:hover {
 
 .thumbnail {
     width: 100%;
-    height: 100px;
+    height:fit-content;
+    margin-top: 15px;
+    padding: 20px;
+    padding-bottom: 0;
 }
 .thumbnail img {
-    height: 95%;
+    height: 14em;
     width: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 15px;
 }
-.vedios {
+.details {
+    display: flex;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0px;
+    margin: 20px;
+}
+
+.author img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 15px;
+
+}
+
+.title h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    position: inherit;
+
+}
+.title a,span {
+    color: #8d8a8a;
+    text-decoration: none;
+    font-size: 12px;
+}
+.videos {
     display: flex;
     flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
 }
+.video {
+    width: 370px;
+}
+.content {
+    background-color: #f9f9f9;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+  }
 
 .search input[type=text] {
     width: 80vh;
@@ -159,10 +205,34 @@ a .burg-menu:hover {
     .mic {
         margin-top: 10px;
     }
-    
-  }
+   
+    .videos {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 45px;
+        margin-right: 50px;
+        padding-left: 40px;
 
-  @media (max-width: 200px) {
+    }
+    .thumbnail {
+        width: 100%;
+    }
+    .thumbnail img {
+        height: 12em;
+    }
+
+    .title {
+        margin-left: 4px;
+    }
+    .title h3 {
+        position: inherit;
+    }
+    
+    
+}
+
+@media (max-width: 400px) {
     .search input[type=text] {
         display: none;
     }
@@ -173,4 +243,4 @@ a .burg-menu:hover {
     .mic {
         margin-bottom: 13px;
     }
-  }
+}
