@@ -19,13 +19,34 @@ body {
 main {
     height: calc(100vh - 70px);
     display: flex;
-    background-color: #f9f9f9;
+    
 }
  
 .left {
     display: flex;
     align-items: center;
 }
+
+.fav {
+    display: flex;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+
+}
+.fav-used {
+    justify-content: space-around;
+    background-color:#eeecec;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 15px;
+    
+}
+
 
 .side-bar {
     height: 100%;
@@ -48,8 +69,18 @@ nav:hover {
     background-color: #b8b8b8;
     cursor: pointer;
 }
+.fav a .active {
+    background-color: #000000;
+    color: #ffffff;
+}
 .active {
-    background-color:#b8b8b8;
+    background-color:#dadada;
+    cursor: pointer;
+}
+
+.fav a div:hover:not(.active){
+    background-color: #dadada;
+    cursor: pointer;
 }
 
 span {
@@ -59,6 +90,8 @@ span {
 .side-link {
     display: block;
     margin: 9px;
+    border-radius: 5px;
+    padding: 5px;
 }
 a .burg-menu:hover {
     background-color: #f9f9f9;
@@ -105,7 +138,15 @@ a .burg-menu:hover {
     margin-top: 0px;
     margin: 20px;
 }
-
+hr {
+    background-color: #eeecec;
+    border: none;
+    height: 1px;
+}
+#subs {
+    padding-top: 0 10px;
+    line-height: 4px;
+}
 .author img {
     object-fit: cover;
     width: 40px;
@@ -116,31 +157,38 @@ a .burg-menu:hover {
 
 }
 
+
 .title h3 {
     font-size: 15px;
     margin-bottom: 5px;
     position: inherit;
 
 }
-.title a,span {
-    color: #8d8a8a;
+.title a,.title span {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
+    color: #7e7d7d;
+}
+.side-nav a:hover {
+    background-color:#eeecec;
+    cursor: pointer;
 }
 .videos {
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
 }
 .video {
     width: 370px;
 }
 .content {
-    background-color: #f9f9f9;
-    padding: 15px 15px;
-    border-top: 1px solid #ddd;
+    background-color: #ffffff;
     overflow-y: scroll;
+    padding: 0;
+    padding-left: 0;
   }
 
 .search input[type=text] {
@@ -214,6 +262,9 @@ a .burg-menu:hover {
         margin-right: 50px;
         padding-left: 40px;
 
+    }
+    .content {
+        overflow: hidden;
     }
     .thumbnail {
         width: 100%;
