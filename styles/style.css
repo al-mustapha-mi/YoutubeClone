@@ -18,7 +18,9 @@ body {
 
 main {
     height: calc(100vh - 70px);
+    width: 100%;
     display: flex;
+    position:absolute;
     
 }
  
@@ -93,11 +95,7 @@ span {
     border-radius: 5px;
     padding: 5px;
 }
-a .burg-menu:hover {
-    background-color: #f9f9f9;
-    color:black;
-    border-radius: 50%;
-}
+
 .icons {
     display: block;
 }
@@ -144,7 +142,7 @@ hr {
     height: 1px;
 }
 #subs {
-    padding-top: 0 10px;
+    margin: 5px;
     line-height: 4px;
 }
 .author img {
@@ -189,6 +187,7 @@ hr {
     overflow-y: scroll;
     padding: 0;
     padding-left: 0;
+    position: relative;
   }
 
 .search input[type=text] {
@@ -214,12 +213,43 @@ hr {
     border-color: #68aae0;
     outline: none;
 }
+.logo button {
+    border-style: none;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.logo button:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+.logo button:active {
+    border: none;
+}
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 700px) {
     .side-bar {
-      display: none;
+        display: none;
     }
+    /*the in has the side-bar desktop view preoperties
+    to compensate display none for the side-bar when in mobile view
+    */
+    .in {
+        display: none;
+        width: 75%;
+        overflow-y: hidden;
+        background-color: white;
+        display: inline-block;
+        padding: 15px;
+    }
+    .blur {
+        opacity: 0.4;
+    }
+    
+
     .side a {
         background-color: #ffff;
 
@@ -231,9 +261,12 @@ hr {
     }
     
     .icons {
-        display: none;
+        display: flex;
+        margin: 7px;
+        justify-content: space-around;
     }
 
+   
     .search input[type=text] {
         width: 40%;
         height: 40px;
@@ -261,6 +294,7 @@ hr {
         margin-left: 45px;
         margin-right: 50px;
         padding-left: 40px;
+        
 
     }
     .content {

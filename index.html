@@ -7,13 +7,27 @@
         <!-- CSS File -->
         <link rel="stylesheet" href="styles/style.css"/>
         <title>Youtube Clone with HTML & CSS</title>
+
+        <!-- spent two days just to find out that the guy down here was wrongly written
+        thanks to chat-GPT -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.burgmenu').click(function() {
+                    $('.side-bar').toggleClass("in");
+                    $('.content').toggleClass('blur');
+                }); 
+            });
+
+        </script>
     </head>
     <body>
         <header>
             <div class="header">
                 <div class="logo left">
-                    <a href="#home" class="burg-menu">
-                    <i id="menu" class="material-icons">menu</i></a>
+                    <button class="burgmenu">
+                        <i id="menu" class="material-icons">menu</i>
+                    </button>
                     <img src="images/logo.png" width="90px" height="50px">
                 </div>
                 <div class="search center">
@@ -363,6 +377,5 @@
                 </div>
             </div>
         </main>
-
     </body>
 </html>
