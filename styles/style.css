@@ -34,7 +34,7 @@ main {
     padding: 5px;
     margin-top: 0;
     margin-bottom: 50px;
-    position: fixed;
+    position:absolute;
     width: 100%;
     background-color: #ffffff;
 
@@ -185,9 +185,7 @@ hr {
 .content {
     background-color: #ffffff;
     overflow-y: scroll;
-    padding: 0;
-    padding-left: 0;
-    position: relative;
+    
   }
 
 .search input[type=text] {
@@ -240,7 +238,8 @@ hr {
     .in {
         display: none;
         width: 75%;
-        overflow-y: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden ;
         background-color: white;
         display: inline-block;
         padding: 15px;
@@ -290,15 +289,20 @@ hr {
     .videos {
         display: block;
         flex-direction: column;
-        justify-content: center;
+        justify-content:center;
         margin-left: 45px;
-        margin-right: 50px;
-        padding-left: 40px;
-        
-
+        margin-right: 45px;
+        width: 80%;
+        position: inherit;
+    }
+    .video{
+        border: 2px solid blue;
+        position: relative;
+        margin: 5px;
     }
     .content {
-        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .thumbnail {
         width: 100%;
