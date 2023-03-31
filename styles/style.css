@@ -296,7 +296,6 @@ hr {
         position: inherit;
     }
     .video{
-        border: 2px solid blue;
         position: relative;
         margin: 5px;
     }
